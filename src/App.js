@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import FancyItemProfileMain from "./Modules/FancyItemProfile/Components/FancyItemProfileMain";
+import FancyItemListingPage from "./Modules/FancyItemListingPage/Components/FancyItemListingPage";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Routes from "./Routes/Routes";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Router>
+				<Switch>
+					<Route component={Routes} />
+				</Switch>
+			</Router>
+		</div>
+	);
 }
 
 export default App;
