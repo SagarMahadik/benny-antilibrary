@@ -4,37 +4,22 @@ import {
 	FancyItemFormPreviewContainer,
 	InputTextBox,
 	InputTextBoxLarge,
-	SocialMediaInputGrid,
-	SocialMediaIcon,
 } from "Modules/FancyItemAdminDashboard/FancyItemForm/Styles/FancyItemFormStyles.jsx";
 import { SpaceBetweenRowContainer } from "StyleLibrary/Global/containerStyles.js";
-import Twitter from "StyleLibrary/Icons/SocialMediaIcons/Twitter.jsx";
+
+import SocialMediaInfo from "Modules/FancyItemAdminDashboard/FancyItemForm/Styles/Molecules/FancyItemForm/FancyItemProfileForm/SocialMediaInfo.jsx";
+import CategorySelectionDrawer from "Modules/FancyItemAdminDashboard/FancyItemForm/Styles/Molecules/FancyItemForm/FancyItemProfileForm/CategorySelectionDrawer.jsx";
 
 const FancyItemProfileForm = () => {
+	const [category, setCategory] = React.useState("");
 	return (
 		<SpaceBetweenRowContainer>
 			<FancyItemFormInputContainer>
 				Fancy Item Profile Form
 				<InputTextBox placeholder="Enter Name for Fancy Item"></InputTextBox>
 				<InputTextBoxLarge placeholder="Enter Description in brief"></InputTextBoxLarge>
-				<SocialMediaInputGrid>
-					<SocialMediaIcon>
-						<Twitter />
-					</SocialMediaIcon>
-					<InputTextBox placeholder="Enter Twitter profile link"></InputTextBox>
-				</SocialMediaInputGrid>
-				<SocialMediaInputGrid>
-					<SocialMediaIcon></SocialMediaIcon>
-					<InputTextBox></InputTextBox>
-				</SocialMediaInputGrid>
-				<SocialMediaInputGrid>
-					<SocialMediaIcon></SocialMediaIcon>
-					<InputTextBox></InputTextBox>
-				</SocialMediaInputGrid>
-				<SocialMediaInputGrid>
-					<SocialMediaIcon></SocialMediaIcon>
-					<InputTextBox></InputTextBox>
-				</SocialMediaInputGrid>
+				<SocialMediaInfo />
+				<CategorySelectionDrawer />
 			</FancyItemFormInputContainer>
 
 			<FancyItemFormPreviewContainer />

@@ -7,6 +7,7 @@ import {
 	RowGridContainer,
 	OverflowScrollContainer,
 	WrappedRowContainer,
+	SpaceBetweenRowContainer,
 } from "StyleLibrary/Global/containerStyles";
 
 export const FancyItemFormMainContainer = styled(
@@ -49,7 +50,7 @@ export const FancyItemFormInputContainer = styled(
 	border: 1px solid #ffffff;
 	box-sizing: border-box;
 	border-radius: 15px;
-	margin 50px;
+	margin: 50px;
 `;
 
 export const FancyItemFormPreviewContainer = styled(
@@ -57,11 +58,11 @@ export const FancyItemFormPreviewContainer = styled(
 )`
 	width: 300px;
 	height: 500px;
-	border: 1px solid #93C2E3;
-box-sizing: border-box;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-border-radius: 10px;
-	margin 50px;
+	border: 1px solid #93c2e3;
+	box-sizing: border-box;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 10px;
+	margin: 50px;
 `;
 
 export const InputTextBox = styled.input`
@@ -72,8 +73,9 @@ export const InputTextBox = styled.input`
 	border: 1px solid #ffffff;
 	box-sizing: border-box;
 	border-radius: 15px;
-	padding : 10px;
-	margin 10px;
+	padding: 10px;
+	margin: 10px;
+	color: white;
 `;
 
 export const InputTextBoxLarge = styled(InputTextBox)`
@@ -92,4 +94,128 @@ export const SocialMediaInputGrid = styled(RowGridContainer)`
 	height: auto;
 	grid-template-columns: 40px 150px;
 	align-items: center;
+`;
+
+export const CategoryButton = styled(CenterAlignedColumnContainer)`
+	padding: 10px 15px;
+	align-items: center;
+	position: static;
+	width: auto;
+	height: 30px;
+
+	margin: 2px;
+
+	border: 1.5px solid #ffffff;
+	box-sizing: border-box;
+	border-radius: 50px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.15px;
+
+	color: #ffffff;
+
+	background: ${(props) => (props.active ? "rgba(255, 255, 255, 0.13)" : "")};
+	transition: all 0.4s ease-in-out;
+`;
+
+export const BookCoverImageContainer = styled(MotionImage)`
+	width: 100px;
+	height: 140px;
+
+	margin: 5px;
+	object-fit: cover;
+`;
+
+export const BookName = styled(CenterAlignedColumnContainer)`
+	width: 100px;
+	height: 40px;
+
+	white-space: normal;
+	font-size: 12px;
+`;
+
+export const BookSearchResultCard = styled(
+	CenterAlignedFlexStartColumnContainer
+)`
+	width: 110px;
+	height: auto;
+	margin: 5px;
+`;
+
+export const BookSearchContainer = styled(SpaceBetweenRowContainer)`
+	width: 290px;
+	height: 480px;
+	margin: 5px;
+	overflow-y: scroll;
+`;
+
+export const BookFormContainer = styled(CenterAlignedFlexStartColumnContainer)`
+	width: 100%;
+	height: 100%;
+	border: 1px solid white;
+	position: absolute;
+`;
+
+export const BookFormAttributeHeader = styled(CenterAlignedColumnContainer)`
+	padding: 10px 15px;
+	align-items: center;
+	position: static;
+	width: auto;
+	height: 30px;
+
+	margin: 2px;
+
+	border: 1px solid #ffffff;
+	box-sizing: border-box;
+	border-radius: 10px;
+
+	font-family: Roboto;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 16px;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.15px;
+
+	color: black;
+
+	background: rgb(255, 255, 255, 0.7);
+`;
+
+export const BookFormOKButton = styled(CenterAlignedColumnContainer)`
+	padding: 10px 15px;
+	align-items: center;
+	position: static;
+	width: auto;
+	height: 40px;
+
+	margin: 2px;
+
+	border: 1px solid #ffffff;
+	box-sizing: border-box;
+	border-radius: 50px;
+
+	font-family: Roboto;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 16px;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.15px;
+
+	color: white;
+
+	background: black;
 `;

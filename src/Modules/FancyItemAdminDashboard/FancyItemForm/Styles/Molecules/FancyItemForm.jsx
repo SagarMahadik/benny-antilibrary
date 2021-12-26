@@ -1,5 +1,7 @@
 import React from "react";
 import FancyItemProfileForm from "../../Components/FormSections/FancyItemProfileForm";
+import FancyItemBooksForm from "../../Components/FormSections/FancyItemBooksForm";
+
 import { FancyItemFormContainer } from "../FancyItemFormStyles";
 
 const FancyItemForm = ({ formActiveSection }) => {
@@ -11,7 +13,7 @@ const FancyItemForm = ({ formActiveSection }) => {
 						return <FancyItemProfileForm></FancyItemProfileForm>;
 						break;
 					case "books":
-						return <h1>Books</h1>;
+						return <FancyItemBooksForm></FancyItemBooksForm>;
 						break;
 
 					case "videos":
